@@ -13,9 +13,22 @@
 }
 
 .screen {
+    display: block;
+    /* flex-direction: column; */
     height: 20%;
     background-color: #f1f1f1;
     border: 3px solid black;
+}
+
+.resultText, .inputText {
+    text-align: end;
+}
+
+.resultText {
+    font-size: 2rem;
+}
+.inputText {
+    font-size: 3rem;
 }
 
 .UI {
@@ -26,12 +39,13 @@
     grid-template-columns: repeat(4, 1fr);
 }
 
-.UI > div {
-    border-radius: 0.5rem;
-    text-align: center;
-    align-content: center;
-    /* background-color: mintcream; */
+.UI > button {
     margin: 1px;
+    border-radius: 0.5rem;
+    align-content: center;
+    text-align: center;
+    font-size: 2rem;;
+    /* background-color: mintcream; */
 }
 
 .op {
