@@ -10,6 +10,7 @@ class Calculator {
         this.input = '';
         this.result = '';
         this.operator = null;
+        inputText.style.fontSize = '3rem';
 
         this.updateDisplay();
     }
@@ -40,7 +41,8 @@ class Calculator {
             this.updateDisplay();
         }
         else {
-            this.input = this.input * -1;
+            let neg = parseFloat(this.input) * -1;
+            this.input = neg.toString();
             this.updateDisplay();
         }
     }
