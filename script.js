@@ -19,6 +19,32 @@ class Calculator {
         this.updateDisplay();
     }
 
+    appendDec(dec) {
+        if (this.input.includes('.')) return;
+        else {
+            this.input += ".";
+            this.updateDisplay();
+        }
+    }
+
+    delete() {
+        if (this.input === '') return;
+
+        this.input = this.input.slice(0, -1);
+        this.updateDisplay();
+    }
+
+    negPos() {
+        if (this.input === '') {
+            this.input = '-';
+            this.updateDisplay();
+        }
+        else {
+            this.input = this.input * -1;
+            this.updateDisplay();
+        }
+    }
+
     selectOperation(operator) {
         if (this.result !== '' && this.input !== '' && this.operator !== null) {
             this.compute();
@@ -101,4 +127,16 @@ clear.addEventListener('click', () => {
 
 equal.addEventListener('click', () => {
     calculator.compute();
+});
+
+decimal.addEventListener('click', () => {
+    calculator.appendDec();
+});
+
+negative.addEventListener('click', () => {
+    calculator.negPos();
+});
+
+del.addEventListener('click', () => {
+    calculator.delete();
 });
