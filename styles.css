@@ -58,6 +58,10 @@
 .num {
     background-color: mintcream;
 }
+button:hover {
+    background-color: #222;
+    color: white;
+}
 
 .zero {
     grid-column: 1 / 3;
